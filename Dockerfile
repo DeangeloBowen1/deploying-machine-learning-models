@@ -11,7 +11,6 @@ ENV FLASK_APP run.py
 # Install requirements, including from Gemfury
 ADD ./packages/ml_api /opt/ml_api/
 RUN pip install --upgrade pip
-RUN pip install -r /opt/ml_api/requirements.txt
 
 RUN chmod +x /opt/ml_api/run.sh
 RUN chown -R ml-api-user:ml-api-user ./
